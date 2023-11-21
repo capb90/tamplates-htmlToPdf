@@ -1,0 +1,126 @@
+:root {
+  --font-bold: Inter-Bold, Roboto-Bold, Mulish-Bold;
+  --font-regular: Inter-Regular, Roboto-Regular, Mulish-Regular, "Open Sans",
+    Calibri, Candara, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: Inter-Regular;
+  src: url(fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: Inter-Bold;
+  src: url(fonts/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: Inter-Regular;
+  src: url(fonts/Mulish-Regular.ttf);
+}
+
+@font-face {
+  font-family: Inter-Bold;
+  src: url(fonts/Mulish-Bold.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  font-weight: 700;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: Mulish-Regular;
+  src: url(fonts/Mulish-Regular.ttf);
+}
+
+@font-face {
+  font-family: Mulish-Bold;
+  src: url(fonts/Mulish-Bold.ttf);
+}
+
+@page :first {
+  @top-right {
+    content: element(header-first-page);
+    margin-top: 70px;
+  }
+}
+
+@page {
+  font-family: var(--font-regular);
+  margin: 3cm;
+
+  @top-left {
+    content: url("assets/logo.svg");
+    margin-top: 70px;
+    margin-bottom: 40px;
+    position: absolute;
+  }
+
+  @top-right {
+    content: element(header-page);
+    margin-top: 70px;
+  }
+
+  @bottom-center {
+    color: #000;
+    content: element(footer);
+  }
+
+  @bottom-right-corner {
+    color: #000;
+    content: counter(page);
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  font-family: var(--font-regular);
+  margin: 0px;
+}
+
+footer {
+  position: running(footer);
+  font-size: 12px;
+  text-align: center;
+}
+
+footer .footer_title {
+  font-family: var(--font-bold);
+  font-size: 12px;
+  color: #000;
+}
+
+footer .footer_content {
+  font-family: var(--font-regular);
+  font-size: 9px;
+  color: #000;
+}
+
+.main-content{
+  padding-top: 40px;
+}
+
+.fw-bold {
+  font-family: var(--font-bold);
+}
+
+
+.header-first-page {
+  position: running(header-first-page);
+}
+
+.header-page{
+  position: running(header-page);
+}
